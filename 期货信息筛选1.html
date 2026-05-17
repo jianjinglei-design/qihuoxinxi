@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>之由期货高价值信息筛选系统</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif}
+    body{background:#f7f9fc;color:#333;padding-bottom:80px}
+    .container{max-width:1200px;margin:0 auto;padding:15px}
+
+    /* 头部 */
+    .header{text-align:center;padding:20px 15px;background:#fff;border-radius:12px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .header h1{font-size:24px;color:#1d3b64;margin-bottom:8px}
+    .header p{font-size:14px;color:#666}
+    .nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+    .nav a{padding:8px 14px;background:#eef3fc;border-radius:8px;text-decoration:none;color:#1d3b64;font-size:14px}
+    .nav a.vip{background:#e63946;color:#fff}
+
+    /* 置顶高价值区 */
+    .top-area{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .top-area h2{font-size:18px;margin-bottom:15px;color:#c0392b}
+
+    /* 资讯卡片 */
+    .news-card{border:1px solid #e5e9f2;border-radius:10px;padding:16px;margin-bottom:14px;background:#fff}
+    .tag-high{color:#c0392b;font-weight:bold}
+    .tag-cautious{color:#e67e22;font-weight:bold}
+    .tag-low{color:#999}
+    .news-card h4{margin-bottom:6px;font-size:15px}
+    .news-card .row{margin:6px 0;font-size:14px;line-height:1.6}
+    .lock{color:#888;font-size:13px}
+
+    /* 品种说明 */
+    .variety{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px}
+    .variety h3{font-size:16px;margin-bottom:10px}
+    .variety p{font-size:14px;line-height:1.7;color:#444}
+
+    /* 价格套餐 */
+    .price{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px}
+    .price h3{font-size:18px;margin-bottom:15px;text-align:center}
+    .price-box{display:grid;grid-template-columns:1fr;gap:12px}
+    .price-item{border:1px solid #e5e9f2;border-radius:10px;padding:15px;text-align:center}
+    .price-item strong{font-size:18px;color:#1d3b64}
+    .price-item p{font-size:14px;margin-top:6px;color:#555}
+
+    /* 免责&底部 */
+    .footer{background:#fff;border-radius:12px;padding:20px;font-size:13px;color:#666;line-height:1.7}
+    .footer .warn{color:#c0392b;font-weight:bold;margin-bottom:10px}
+    .footer .link{margin-top:10px}
+    .footer .link a{color:#1d3b64;text-decoration:none}
+
+    @media(min-width:768px){
+      .price-box{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- 头部 -->
+  <div class="header">
+    <h1>之由期货高价值信息筛选系统</h1>
+    <p>覆盖：中金所、上期所、上期能源、大商所、郑商所、广期所｜含航运指数期货、商品/金融期权</p>
+    <p>商品期货自动化信息过滤工具，仅汇总公开客观市场资讯，不构成任何投资交易建议</p>
+    <div class="nav">
+      <a href="#">首页</a>
+      <a href="#">今日早间资讯</a>
+      <a href="#">盘中实时突发</a>
+      <a href="#">历史资讯库</a>
+      <a href="#">品种专属筛选</a>
+      <a href="#" class="vip">开通会员</a>
+    </div>
+  </div>
+
+  <!-- 今日高价值置顶 -->
+  <div class="top-area">
+    <h2>📌 今日顶级高价值驱动资讯 · 每日仅3条</h2>
+
+    <div class="news-card">
+      <h4>【资讯01】</h4>
+      <div class="row"><strong>发布时间：</strong>2026-05-17 08:15</div>
+      <div class="row"><strong>关联品种：</strong>航运指数期货</div>
+      <div class="row"><strong>信息价值等级：</strong><span class="tag-high">🔴 高价值</span></div>
+      <div class="row"><strong>原始事件：</strong>国际主要航线运价首次出现大幅跳涨，运力紧张加剧</div>
+      <div class="row"><strong>核心提炼：</strong>全球航运运力收缩，运价短期快速上行</div>
+      <div class="row"><strong>客观潜在影响：</strong>航运指数期货存在阶段性上行潜在驱动</div>
+      <div class="row lock"><strong>历史参考：</strong>🔒 会员可见</div>
+    </div>
+
+    <div class="news-card">
+      <h4>【资讯02】</h4>
+      <div class="row"><strong>发布时间：</strong>2026-05-17 08:22</div>
+      <div class="row"><strong>关联品种：</strong>原油期货</div>
+      <div class="row"><strong>信息价值等级：</strong><span class="tag-high">🔴 高价值</span></div>
+      <div class="row"><strong>原始事件：</strong>中东地区地缘冲突升级，原油供给预期收紧</div>
+      <div class="row"><strong>核心提炼：</strong>地缘事件首次发酵，原油供给端风险抬升</div>
+      <div class="row"><strong>客观潜在影响：</strong>对原油价格形成潜在利多支撑</div>
+      <div class="row lock"><strong>历史参考：</strong>🔒 会员可见</div>
+    </div>
+
+    <div class="news-card">
+      <h4>【资讯03】</h4>
+      <div class="row"><strong>发布时间：</strong>2026-05-17 08:30</div>
+      <div class="row"><strong>关联品种：</strong>沪深300股指期货</div>
+      <div class="row"><strong>信息价值等级：</strong><span class="tag-high">🔴 高价值</span></div>
+      <div class="row"><strong>原始事件：</strong>央行释放新的流动性宽松信号</div>
+      <div class="row"><strong>核心提炼：</strong>货币政策边际宽松，权益市场流动性改善</div>
+      <div class="row"><strong>客观潜在影响：</strong>对股指期货存在潜在正向驱动</div>
+      <div class="row lock"><strong>历史参考：</strong>🔒 会员可见</div>
+    </div>
+  </div>
+
+  <!-- 品种说明 -->
+  <div class="variety">
+    <h3>📊 全交易所全品种精准筛选</h3>
+    <p>覆盖：中金所（含航运指数期货、股指/国债期货、股指期权）、上期所、上期能源、大商所、郑商所、广期所全部上市品种；支持商品期货、商品期权、金融期权一键订阅。</p>
+    <p>✅ 会员专属：自定义交易所+品种双筛选，仅推送你关注标的资讯。</p>
+  </div>
+
+  <!-- 价格套餐 -->
+  <div class="price">
+    <h3>订阅套餐</h3>
+    <div class="price-box">
+      <div class="price-item">
+        <strong>免费基础版</strong>
+        <p>永久免费</p>
+        <p>每日3条早间高价值资讯</p>
+        <p>无盘中突发、无历史参考</p>
+      </div>
+      <div class="price-item">
+        <strong>月度会员</strong>
+        <p>29元/月</p>
+        <p>全部功能解锁</p>
+        <p>盘中突发+历史参考+品种筛选</p>
+      </div>
+      <div class="price-item">
+        <strong>年度会员</strong>
+        <p>269元/年</p>
+        <p>8.5折优惠</p>
+        <p>赠送1个月会员时长</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部合规+导流 -->
+  <div class="footer">
+    <div class="warn">免责声明：本系统所有内容仅为公开市场信息的客观整理与筛选，不构成任何期货、股票投资交易建议，据此交易产生的盈亏风险，由交易者自行承担。</div>
+    <div>企业/机构用户可开具：信息技术服务费 正规发票</div>
+    <div class="link">🔗 <a href="#">交易者财富人格测评｜之由宇宙主站</a></div>
+  </div>
+</div>
+</body>
+</html>
